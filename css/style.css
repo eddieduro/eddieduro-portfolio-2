@@ -1,0 +1,523 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+
+
+
+
+ .hidden {
+  display: none;
+}
+
+/*contact form*/
+
+
+
+
+form {
+  font-family: 'roboto', sans-serif;
+  width: 460px;
+  margin: 100px auto 0;
+  box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.2);
+  padding: 0 0 40px;
+  border-radius: 3px;
+  color: #F44336 !important;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  font: inherit;
+  transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+input,
+textarea {
+  font: inherit;
+  font-size: 0.8em;
+  margin: 28px 25px 10px;
+  width: 85%;
+  display: block;
+  border: none;
+  padding: 20px 0 10px;
+  border-bottom: solid 1px #F44336;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #F44336 4%);
+  background-position: -400px 0;
+  background-size: 400px 100%;
+  background-repeat: no-repeat;
+  transition: background 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  resize: none;
+  overflow: hidden;
+}
+
+input:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+  color: #03A9F4;
+}
+
+input:focus,
+input:valid,
+textarea:focus,
+textarea:valid {
+  box-shadow: none;
+  outline: none;
+  background-position: 0 0;
+}
+
+input:focus::-webkit-input-placeholder,
+input:valid::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder,
+textarea:valid::-webkit-input-placeholder {
+  font-size: 0.8em;
+  transform: translateY(-20px);
+  visibility: visible !important;
+  opacity: 1;
+}
+
+input[type="email"] {
+ font: inherit;
+  font-size: 0.8em;
+  margin: 28px 25px 10px;
+  width: 85%;
+  display: block;
+  border: none;
+  padding: 20px 0 10px;
+  border-bottom: solid 1px #F44336;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #F44336 4%);
+  background-position: -400px 0;
+  background-size: 400px 100%;
+  background-repeat: no-repeat;
+  transition: background 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+  resize: none;
+  overflow: hidden;
+}
+
+input[type="email"] ~ span.validation-text {
+  position: absolute;
+  visibility: hidden;
+  font-family: 'roboto', sans-serif;
+  font-size: 0.6em;
+  width: 400px;
+  margin-left: 25px;
+  margin-top: -5px;
+  color: white;
+  transition: color 0.3s ease-in-out;
+
+}
+
+input[type="email"]:not([value=""])::-webkit-input-placeholder {
+  font-size: 0.8em;
+  transform: translateY(-20px);
+  visibility: visible !important;
+  opacity: 1;
+}
+
+input[type="email"]:not([value=""]):focus::-webkit-input-placeholder {
+  color: #03A9F4;
+}
+
+input[type="email"]:not([value=""]):focus:not(:valid)::-webkit-input-placeholder {
+  color: #E91E63;
+}
+
+input[type="email"]:focus {
+  background-position: 0 0;
+}
+
+input[type="email"]:focus:not(:valid):not([value=""]) {
+  border-bottom: solid 1px #F44336;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #F44336 4%);
+}
+
+input[type="email"]:not(:focus):not(:valid):not([value=""]) {
+  border-bottom: solid 1px #F44336;
+  background-position: 0 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 96%, #F44336 4%);
+}
+
+input[type="email"]:not(:focus):not(:valid):not([value=""])::-webkit-input-placeholder {
+  color: #F44336;
+}
+
+input[type="email"]:not(:focus):not(:valid):not([value=""]) ~ span.validation-text {
+  visibility: visible;
+  color: #F44336;
+}
+
+.flex {
+  display: flex;
+  align-items: stretch;
+}
+
+.flex textarea {
+  line-height: 120%;
+}
+
+
+
+/*a {
+  display: inline-block;
+  width: 100%;
+  margin-top: 50px;
+  text-align: center;
+  font-family: 'roboto', sans-serif;
+  text-decoration: none;
+  color: $base;
+  i {
+    margin-right: 5px;
+  }
+}*/
+
+
+
+
+
+
+/*
+.mdl-layout {
+  align-items: center;
+  justify-content: center;
+}
+.mdl-layout__content {
+  padding: 24px;
+  flex: none;
+}
+.mdl-textfield__error {
+  width: 100%;
+  left: 0;
+ text-align: left;
+}
+*/
+
+
+
+/*animation element*/
+
+.animation-element {
+  opacity: 0;
+  position: relative;
+}
+/*animation element sliding left*/
+
+.animation-element.slide-left {
+  opacity: 0;
+  -moz-transition: all 5000ms linear;
+  -webkit-transition: all 500ms linear;
+  -o-transition: all 500ms linear;
+  transition: all 500ms linear;
+  -moz-transform: translate3d(-1000px, 0px, 0px);
+  -webkit-transform: translate3d(-1000px, 0px, 0px);
+  -o-transform: translate(-1000px, 0px);
+  -ms-transform: translate(-1000px, 0px);
+  transform: translate3d(-100px, 0px, 0px);
+}
+
+.animation-element.slide-left.in-view {
+  opacity: 1;
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+}
+/*animation slide left styled for testimonials*/
+
+
+.animation-element.slide-left.testimonial:hover,
+.animation-element.slide-left.testimonial:active{
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.25);
+}
+
+.animation-element.slide-left.testimonial:nth-of-type(odd) {
+  width: 100%;
+  margin: 0% 1.5% 3.0% 0%;
+}
+
+.animation-element.slide-left.testimonial:nth-of-type(even) {
+  width: 48.5%;
+  margin: 0% 0% 3.0% 1.5%;
+}
+
+.animation-element.slide-left.testimonial .header{
+  float: left;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.animation-element.slide-left.testimonial .left{
+  float: left;
+  margin-right: 15px;
+}
+.animation-element.slide-left.testimonial .right{
+  float: left;
+}
+
+
+
+
+
+/*media queries for small devices*/
+@media screen and (max-width: 678px){
+  /*testimonials*/
+  .animation-element.slide-left.testimonial,
+  .animation-element.slide-left.testimonial:nth-of-type(odd),
+  .animation-element.slide-left.testimonial:nth-of-type(even){
+    width: 100%;
+    margin: 0px 0px 20px 0px;
+  }
+  .animation-element.slide-left.testimonial .right,
+  .animation-element.slide-left.testimonial .left,
+  .animation-element.slide-left.testimonial .content,
+  .animation-element.slide-left.testimonial .rating{
+    text-align: center;
+    float: none;
+  }
+  .animation-element.slide-left.testimonial img{
+    width: 85px;
+    height: 85px;
+    margin-bottom: 5px;
+  }
+  
+}
+
+
+
+ /* test */
+
+
+.bounce-up .subject {
+  opacity: 0;
+  -moz-transition: all 700ms ease-out;
+  -webkit-transition: all 700ms ease-out;
+  -o-transition: all 700ms ease-out;
+  transition: all 700ms ease-out;
+  -moz-transform: translate3d(0px, 200px, 0px);
+  -webkit-transform: translate3d(0px, 200px, 0px);
+  -o-transform: translate(0px, 200px);
+  -ms-transform: translate(0px, 200px);
+  transform: translate3d(0px, 200, 0px);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.bounce-up.in-view .subject {
+  opacity: 1;
+  -moz-transform: translate3d(0px, 0px, 0px);
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  -o-transform: translate(0px, 0px);
+  -ms-transform: translate(0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+}
+
+.subject {
+  float: left;
+  width: 100%;
+  margin: 0% 1.33% 2.66% 1.33%;
+  background: #F5F5F5;
+  padding: 15px;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.2);
+  border: solid 1px #EAEAEA;
+}
+
+.subject:hover,
+.subject:active {
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+.subject .header {
+  margin: 8px 0px;
+}
+
+.subject .header .date,
+.subject .header .category {
+  margin: 0px;
+  clear: none;
+  width: 50%;
+}
+
+.subject .header .date i,
+.subject .header .category i {
+  margin-right: 5px;
+  color: #333;
+  -moz-transition: all 400ms linear;
+  -webkit-transition: all 400ms linear;
+  -o-transition: all 400ms linear;
+  transition: all 400ms linear;
+}
+
+.subject .header .date {
+  float: left;
+  text-align: left;
+}
+
+.subject .header .category {
+  float: right;
+  text-align: right;
+}
+/*subject icon at top*/
+
+.subject .icon {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  left: calc(50% - 20px);
+}
+
+.subject .icon i {
+  width: 40px;
+  height: 40px;
+  color: rgb(255, 255, 255);
+  font-size: 150%;
+  border-radius: 50%;
+  text-align: center;
+  padding: 7px;
+}
+/*Category color / icon color*/
+
+.subject .category-color {
+  height: 7px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+}
+
+.subject.design .category-color,
+.subject.design .icon i {
+  background: #c0392b;
+}
+
+.subject.development .category-color,
+.subject.development .icon i {
+  background: #16a085;
+}
+
+.subject.photography .category-color,
+.subject.photography .icon i {
+  background: #2980b9;
+}
+/*hovering over subject*/
+
+.subject.development:hover .header i {
+  color: #16a085;
+}
+
+.subject.design:hover .header i {
+  color: #c0392b;
+}
+
+.subject.photography:hover .header i {
+  color: #2980b9;
+}
+
+.subject .title {
+  margin: 12px 0px;
+  border-bottom: dashed 1px #ccc;
+  padding-bottom: 10px;
+}
+
+.subject .content {
+  margin-bottom: 8px;
+}
+
+.subject .enrole {
+  position: relative;
+  color: #333;
+  padding: 5px 12px;
+  cursor: pointer;
+  float: right;
+  display: inline-block;
+  border: solid 1px #ccc;
+  -moz-transition: all 400ms linear;
+  -webkit-transition: all 400ms linear;
+  -o-transition: all 400ms linear;
+  transition: all 400ms linear;
+}
+
+.subject .enrole:hover,
+.subject .enrole:active {
+  background: #222;
+  color: #fff;
+}
+
+
+
+ /* test 2 */
+
+#hideme
+{
+    opacity:0;
+}
+
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #545454;
+}
+
+.eddie-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .eddie-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .eddie-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+
+@media only screen and (max-width : 600px) {
+  form {
+    max-width: 100%;
+  }
+  input[type="email"] ~ span.validation-text {
+    max-width: 100%;
+  }
+
+}
+
+@media only screen and (min-width: 993px){
+.row .col.l3 {
+    width: 25%;
+    margin-left: 25%;
+  }
+}
